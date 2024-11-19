@@ -167,7 +167,11 @@
 
 using System.Formats.Asn1;
 using System.Linq.Expressions;
+using System.Net.WebSockets;
 using System.Numerics;
+using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices.Marshalling;
+using Microsoft.Win32.SafeHandles;
 
 // string studentName = "Sophia Johnson";
 // string course1Name = "English 101";
@@ -283,29 +287,87 @@ using System.Numerics;
 //     Console.WriteLine("Sorry, you lose.");
 // }
 
-Random random = new Random();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
+// IF ELSE PROJECT
+// Random random = new Random();
+// int daysUntilExpiration = random.Next(12);
+// int discountPercentage = 0;
 
-if (daysUntilExpiration == 0)
+// if (daysUntilExpiration == 0)
+// {
+//     Console.WriteLine("Your subscription has expired.");
+// }
+// else if (daysUntilExpiration == 1)
+// {
+//     Console.WriteLine("Your Subscription expires within a day");
+//     discountPercentage = 20;
+// }
+// else if (daysUntilExpiration <= 5)
+// {
+//     Console.WriteLine($"Your Subscription expires in {daysUntilExpiration} days");
+//     discountPercentage = 10;
+// }
+// else if ((daysUntilExpiration <= 10 ))
+// {
+//     Console.WriteLine("Your subscription will expire soon. Renew now!");
+// }
+// if (discountPercentage > 0)
+// {
+//     Console.WriteLine($"Renew now and save {discountPercentage}%");
+// }
+
+// ARRAY BASICS
+// Arrays can be used to store multiple values of the same type in a single variable.
+// An array is a special type of variable that can hold multiple values of the same data type
+
+/*
+// declare new array
+string[] fraudulentOrderIDs = new string[3];
+int[] myarray = new int[3]; myarray[0] = 1; myarray[1] = 2; myarray[2] = 3;
+
+
+fraudulentOrderIDs[0] = "A123";
+fraudulentOrderIDs[1] = "B456";
+fraudulentOrderIDs[2] = "C789";
+// fraudulentOrderIDs[3] = "D000";
+*/
+
+// string[] fraudulentOrderIDs = [ "A123", "B456", "C789" ]; //collection expression
+
+// Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+// Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+// Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+
+// fraudulentOrderIDs[0] = "F000";
+
+// Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
+
+// //size of an array
+// Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process");
+
+// FOREACH STATEMENT
+// string [] names = {"Rowena", "Robin", "Bao"};
+// foreach (string name in names)
+// {
+//     Console.WriteLine(name);
+// }
+
+// int [] inventory = [200, 450, 700, 175, 250];
+// int sum = 0;
+// int bin = 0;
+// foreach (int items in inventory)
+// {
+//     sum += items;
+//     bin ++;
+//     Console.WriteLine($"Bin {bin} = {items} (Running total: {sum})");
+// }
+// Console.WriteLine($"We have {sum} items in inventory.");
+
+//NESTED ITERATION
+string [] orderIDs = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+foreach (string orderID in orderIDs)
 {
-    Console.WriteLine("Your subscription has expired.");
-}
-else if (daysUntilExpiration == 1)
-{
-    Console.WriteLine("Your Subscription expires within a day");
-    discountPercentage = 20;
-}
-else if (daysUntilExpiration <= 5)
-{
-    Console.WriteLine($"Your Subscription expires in {daysUntilExpiration} days");
-    discountPercentage = 10;
-}
-else if ((daysUntilExpiration <= 10 ))
-{
-    Console.WriteLine("Your subscription will expire soon. Renew now!");
-}
-if (discountPercentage > 0)
-{
-    Console.WriteLine($"Renew now and save {discountPercentage}%");
+   if (orderID.StartsWith("B"))
+   {
+    Console.WriteLine(orderID);
+   } 
 }
