@@ -752,7 +752,7 @@ Console.WriteLine($"{employeeName}, {title}");
 
 */
 
-//SKU = Stock Keeping Unit
+/*
 // SKU = Stock Keeping Unit
 string sku = "01-MN-L";
 
@@ -808,3 +808,30 @@ switch (product[2])
 }
 
 Console.WriteLine($"Product: {size} {color} {type}");
+*/
+
+//FOR STATEMENTS
+// for (int i = 0; i < 10; i++) //initializer, condition, iterator
+// {
+//     Console.WriteLine(i);
+// }
+
+// for (int i = 0; 1 < 10; i++)
+// {
+//     Console.WriteLine(i);
+//     if (i == 7) break;
+// }
+
+string [] names = {"Evans", "Eddie", "Cath", "Trevor"};
+for (int i = 0; i < names.Length; i++)
+{
+    if (names[i] == "Eddie")
+    {
+        names[i] = "Gershom";
+    }
+}
+
+foreach (var name in names) 
+{
+    Console.WriteLine(name);
+}
