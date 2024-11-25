@@ -822,6 +822,7 @@ Console.WriteLine($"Product: {size} {color} {type}");
 //     if (i == 7) break;
 // }
 
+/*
 string [] names = {"Evans", "Eddie", "Cath", "Trevor"};
 for (int i = 0; i < names.Length; i++)
 {
@@ -834,4 +835,20 @@ for (int i = 0; i < names.Length; i++)
 foreach (var name in names) 
 {
     Console.WriteLine(name);
+}
+*/
+
+// FIZZBUZZ 
+// For statement, if statement, % remainder and logic
+
+for (int i = 1; i < 101; i ++)
+{
+    if ((i % 3 == 0) && (i % 5 == 0))
+        Console.WriteLine($"{i} - FizzBuzz");
+    else if (i % 3 == 0)
+        Console.WriteLine($"{i} - Fizz");
+    else if (i % 5 == 0)
+        Console.WriteLine($"{i} - Buzz");
+    else
+        Console.WriteLine($"{i}");
 }
