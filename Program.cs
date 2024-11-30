@@ -876,7 +876,7 @@ do
 // }
 // Console.WriteLine($"Last Number: {current}");
 
-using System;   
+/* using System;   
 using System.IO;    
 
 // the ourAnimals array will store the following: 
@@ -1210,3 +1210,29 @@ do
     }
 
 } while (menuSelection != "exit");
+ */
+
+ using System;
+using System;
+
+/* class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a non-negative integer: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Console.WriteLine($"Factorial of {n} is: {FindFactorial(n)}");
+    }
+
+    static long FindFactorial(int n) => n <= 1 ? 1 : n * FindFactorial(n - 1);
+}
+ */
+
+// DATA TYPES 
+Console.WriteLine($"Signed integral types: ");
+
+Console.WriteLine($"sbyte   : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short   : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int     : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long    : {long.MinValue} to {long.MaxValue}");
